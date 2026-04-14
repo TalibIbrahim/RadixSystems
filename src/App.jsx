@@ -78,6 +78,52 @@ const services = [
     title: 'Custom Chatbots',
     desc: 'Conversational AI solutions tailored to your platform — web, mobile, or messaging apps.',
   },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M2 12h20" />
+        <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+      </svg>
+    ),
+    title: 'Cloud Solutions',
+    desc: 'Scalable cloud architecture on AWS, GCP & Azure — from migration to fully managed infrastructure.',
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 20h9" />
+        <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
+      </svg>
+    ),
+    title: 'UI/UX Design',
+    desc: 'Research-driven interfaces designed for conversion, accessibility, and delightful user journeys.',
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4 4h16v16H4z" />
+        <path d="M9 9h6v6H9z" />
+        <path d="M9 2v2" /><path d="M15 2v2" />
+        <path d="M9 20v2" /><path d="M15 20v2" />
+        <path d="M2 9h2" /><path d="M2 15h2" />
+        <path d="M20 9h2" /><path d="M20 15h2" />
+      </svg>
+    ),
+    title: 'API Development',
+    desc: 'RESTful & GraphQL APIs built for scale — robust, documented, and production-ready from day one.',
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <path d="M16 10a4 4 0 01-8 0" />
+      </svg>
+    ),
+    title: 'E-Commerce Solutions',
+    desc: 'End-to-end online storefronts with payment gateways, inventory management, and analytics.',
+  },
 ];
 
 const projects = [
@@ -135,11 +181,11 @@ const projects = [
     desc: 'Scalable, multi-tenant Point of Sale system built with NestJS & PostgreSQL.',
     url: null,
     tag: 'Enterprise',
-    image: null,
+    image: 'https://res.cloudinary.com/dk5pnej6r/image/upload/q_auto/f_auto/v1776194079/Radix%20Systems/f318e1af-bb4c-4bc1-b63b-ec54cf018425.png',
   },
 ];
 
-const LOGO_URL = 'https://res.cloudinary.com/dk5pnej6r/image/upload/q_auto/f_auto/v1776193540/Radix%20Systems/radix_systems_-_transparent_gcyhso.png';
+const LOGO_URL = 'https://res.cloudinary.com/dk5pnej6r/image/upload/q_auto/f_auto/v1776195849/radix_nt23cq.png';
 
 /* ── App ── */
 function App() {
@@ -172,9 +218,6 @@ function App() {
       <div className="content">
         {/* ── Navbar ── */}
         <nav className="navbar">
-          <a href="#" className="logo-link" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-            <img src={LOGO_URL} alt="Radix Systems" className="logo-img" />
-          </a>
           <div className="nav-links">
             <a href="#services" onClick={(e) => { e.preventDefault(); scrollTo('services'); }}>Services</a>
             <a href="#projects" onClick={(e) => { e.preventDefault(); scrollTo('projects'); }}>Projects</a>
@@ -184,11 +227,20 @@ function App() {
 
         {/* ── Hero ── */}
         <section className="hero">
+          <motion.img
+            src={LOGO_URL}
+            alt="Radix Systems"
+            className="hero-logo"
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7 }}
+          />
+
           <motion.div
             className="hero-badge"
             initial={{ opacity: 0, y: -16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
           >
             ✦ Next-Gen Software Agency
           </motion.div>
@@ -312,11 +364,15 @@ function App() {
                     rel="noopener noreferrer"
                     className="project-card"
                   >
-                    {p.image && (
-                      <div className="project-img-wrap">
+                    <div className="project-img-wrap">
+                      {p.image ? (
                         <img src={p.image} alt={p.title} className="project-img" loading="lazy" />
-                      </div>
-                    )}
+                      ) : (
+                        <div className="project-img-placeholder">
+                          <span>{p.title[0]}</span>
+                        </div>
+                      )}
+                    </div>
                     <div className="project-info">
                       <span className="project-tag">{p.tag}</span>
                       <h3>{p.title}</h3>
@@ -326,11 +382,15 @@ function App() {
                   </a>
                 ) : (
                   <div className="project-card project-card--no-link">
-                    {p.image && (
-                      <div className="project-img-wrap">
+                    <div className="project-img-wrap">
+                      {p.image ? (
                         <img src={p.image} alt={p.title} className="project-img" loading="lazy" />
-                      </div>
-                    )}
+                      ) : (
+                        <div className="project-img-placeholder">
+                          <span>{p.title[0]}</span>
+                        </div>
+                      )}
+                    </div>
                     <div className="project-info">
                       <span className="project-tag">{p.tag}</span>
                       <h3>{p.title}</h3>
