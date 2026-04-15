@@ -27,7 +27,7 @@ function App() {
       {/* Aurora Background */}
       <div className="aurora-bg">
         <Aurora
-          colorStops={["#6e67ff", "#B497CF", "#bb51f0ff"]}
+          colorStops={["#6e67ff", "#B497CF", "#bb51f0"]}
           blend={0.49}
           amplitude={0.4}
           speed={0.4}
