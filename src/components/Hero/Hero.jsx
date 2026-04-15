@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { LOGO_URL } from '../../data/constants';
+import { motion } from "framer-motion";
+import { LOGO_URL } from "../../data/constants";
 
 /* ── Hero Section ── */
 function Hero({ email, setEmail, onGetQuote, scrollTo }) {
@@ -11,14 +11,10 @@ function Hero({ email, setEmail, onGetQuote, scrollTo }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.15 }}
       >
-        <img
-          src={LOGO_URL}
-          alt="Radix Systems"
-          className="hero-title-logo"
-        />
+        <img src={LOGO_URL} alt="Radix Systems" className="hero-title-logo" />
       </motion.div>
 
-        <motion.div
+      <motion.div
         className="hero-badge"
         initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: 1, y: 0 }}
@@ -33,8 +29,8 @@ function Hero({ email, setEmail, onGetQuote, scrollTo }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
       >
-        We craft cutting-edge digital experiences — from stunning web apps
-        to AI-powered automation — that captivate and scale.
+        We craft cutting-edge digital experiences, from stunning web apps to
+        AI-powered automations that captivate and scale.
       </motion.p>
 
       <motion.form
@@ -62,7 +58,7 @@ function Hero({ email, setEmail, onGetQuote, scrollTo }) {
           type="button"
           className="btn-services"
           id="our-services-btn"
-          onClick={() => scrollTo('services')}
+          onClick={() => scrollTo("services")}
         >
           Our Services ↓
         </button>
@@ -88,6 +84,31 @@ function Hero({ email, setEmail, onGetQuote, scrollTo }) {
           <span className="stat-number">4.9★</span>
           <span className="stat-label">Client Rating</span>
         </div>
+      </motion.div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        className="scroll-indicator"
+        initial={{ opacity: 0, y: 0 }}
+        animate={{ opacity: 1, y: [0, 8, 0] }}
+        transition={{
+          opacity: { duration: 0.6, delay: 0.9 },
+          y: { duration: 1.8, repeat: Infinity, ease: "easeInOut", delay: 1.2 },
+        }}
+        onClick={() => scrollTo("services")}
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M7 10l5 5 5-5" />
+        </svg>
       </motion.div>
     </section>
   );
