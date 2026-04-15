@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
 /* ── Aurora Background ── */
 .aurora-bg {
@@ -58,7 +58,7 @@
   justify-content: center;
   text-align: center;
   min-height: 100vh;
-  padding: 6rem 2rem 4rem;
+  padding: 0rem 2rem 4rem;
   gap: 1.2rem;
 }
 
@@ -85,13 +85,21 @@
   text-transform: uppercase;
 }
 
-.hero-title {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.04em;
-  color: #f1f0ff;
+.hero-title-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   max-width: 720px;
+}
+
+.hero-title-logo {
+  width: 100%;
+  max-width: clamp(280px, 50vw, 560px);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 40px rgba(124, 58, 237, 0.35))
+    drop-shadow(0 0 80px rgba(110, 103, 255, 0.15));
 }
 
 .gradient-text {
@@ -126,7 +134,9 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 14px;
   overflow: hidden;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
 }
 
 .email-input-group:focus-within {
@@ -177,7 +187,10 @@
   font-weight: 500;
   cursor: pointer;
   font-family: inherit;
-  transition: background 0.3s, border-color 0.3s, transform 0.2s;
+  transition:
+    background 0.3s,
+    border-color 0.3s,
+    transform 0.2s;
 }
 
 .btn-services:hover {
@@ -269,7 +282,10 @@
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.07);
   backdrop-filter: blur(10px);
-  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s;
   height: 100%;
 }
 
@@ -323,7 +339,10 @@
   backdrop-filter: blur(10px);
   text-decoration: none;
   color: inherit;
-  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s;
   overflow: hidden;
 }
 
@@ -359,7 +378,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(110, 103, 255, 0.08));
+  background: linear-gradient(
+    135deg,
+    rgba(124, 58, 237, 0.12),
+    rgba(110, 103, 255, 0.08)
+  );
 }
 
 .project-img-placeholder span {
@@ -370,13 +393,15 @@
 }
 
 .project-card::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-      rgba(124, 58, 237, 0.06),
-      transparent 60%);
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(124, 58, 237, 0.06),
+    transparent 60%
+  );
   opacity: 0;
   transition: opacity 0.4s;
   pointer-events: none;
@@ -401,12 +426,18 @@
   padding: 0.25rem 0.7rem;
   border-radius: 6px;
   background: rgba(124, 58, 237, 0.18);
-  color: #c4b5fd;
+  color: #baa9ff;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   width: fit-content;
+}
+
+.project-description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .project-card h3 {
@@ -424,7 +455,7 @@
 .project-arrow {
   margin-top: auto;
   font-size: 1.2rem;
-  color: #a78bfa;
+  color: #8a6ae9;
   transition: transform 0.3s;
 }
 
@@ -462,7 +493,9 @@
   font-size: 0.92rem;
   font-family: inherit;
   outline: none;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
 }
 
 .form-input::placeholder {
@@ -489,7 +522,9 @@
   font-weight: 600;
   cursor: pointer;
   font-family: inherit;
-  transition: transform 0.2s, box-shadow 0.3s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.3s;
   box-shadow: 0 0 24px rgba(124, 58, 237, 0.35);
 }
 
