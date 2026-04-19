@@ -1,4 +1,4 @@
-import { FiLinkedin, FiTwitter, FiGithub, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import { FiLinkedin, FiTwitter, FiGithub, FiMail, FiMapPin } from "react-icons/fi";
 
 function Footer() {
   return (
@@ -44,11 +44,7 @@ function Footer() {
             <ul className="footer-contact-list">
               <li>
                 <FiMapPin className="contact-icon" />
-                <span>123 Tech Street, Silicon Valley, CA 94025</span>
-              </li>
-              <li>
-                <FiPhone className="contact-icon" />
-                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                <span>64-19 Kissena Blvd, Suite 200<br />Flushing, NY 11367</span>
               </li>
               <li>
                 <FiMail className="contact-icon" />
