@@ -17,7 +17,7 @@ function Hero() {
         AI-powered automations that captivate and scale.
       </motion.p>
 
-      <motion.form className="hero-cta-row" onSubmit={(e) => e.preventDefault()} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.45 }}>
+      <motion.form className="hero-cta-row" onSubmit={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.45 }}>
         <div className="email-input-group">
           <input type="email" placeholder="Enter your email" required className="email-input" id="hero-email-input" />
           <button type="submit" className="btn-quote" id="get-quote-btn">Get a Free Quote</button>
