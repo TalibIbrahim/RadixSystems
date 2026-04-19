@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///home/hammad/Documents/Projects/hamza/weblandingpage/weblanding-next/components/Aurora/Aurora.css"],"sourcesContent":[".aurora-container {\n  width: 100%;\n  height: 100%;\n}\n"],"names":[],"mappings":"AAAA"}}]
+}
