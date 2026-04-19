@@ -48,7 +48,7 @@ function Footer() {
               </li>
               <li>
                 <FiMail className="contact-icon" />
-                <a href="mailto:info@radixsystems.com">info@radixsystems.com</a>
+                <a href="mailto:info@radixsystems.online">info@radixsystems.online</a>
               </li>
             </ul>
           </div>
