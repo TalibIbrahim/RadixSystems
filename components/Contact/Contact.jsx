@@ -3,7 +3,7 @@ import Reveal from '../Reveal/Reveal'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FiCheckCircle } from 'react-icons/fi'
 
-export default function Contact() {
+export default function Contact({ quoteEmail, setQuoteEmail }) {
   const [status, setStatus] = useState('idle')
 
   async function handleSubmit(e) {
@@ -71,7 +71,7 @@ export default function Contact() {
                 <input type="text" placeholder="Your Name" className="form-input" id="contact-name" name="name" required disabled={status === 'submitting'} />
 
                 <label className="visually-hidden" htmlFor="contact-email">Email Address</label>
-                <input type="email" placeholder="Email Address" className="form-input" id="contact-email" name="email" required disabled={status === 'submitting'} />
+                <input type="email" placeholder="Email Address" className="form-input" id="contact-email" name="email" required disabled={status === 'submitting'} value={quoteEmail || ''} onChange={(e) => setQuoteEmail && setQuoteEmail(e.target.value)} />
               </div>
               <label className="visually-hidden" htmlFor="contact-subject">Subject</label>
               <input type="text" placeholder="Subject" className="form-input" id="contact-subject" name="subject" disabled={status === 'submitting'} />

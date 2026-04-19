@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { LOGO_URL } from "../../data/constants";
 
-function Hero() {
+function Hero({ quoteEmail, setQuoteEmail }) {
   return (
     <section className="hero">
       <motion.div className="hero-title-logo-wrap" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.15 }}>
@@ -19,7 +19,7 @@ function Hero() {
 
       <motion.form className="hero-cta-row" onSubmit={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.45 }}>
         <div className="email-input-group">
-          <input type="email" placeholder="Enter your email" required className="email-input" id="hero-email-input" />
+          <input type="email" placeholder="Enter your email" required className="email-input" id="hero-email-input" value={quoteEmail || ''} onChange={(e) => setQuoteEmail && setQuoteEmail(e.target.value)} />
           <button type="submit" className="btn-quote" id="get-quote-btn">Get a Free Quote</button>
         </div>
         <button type="button" className="btn-services" id="our-services-btn" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>

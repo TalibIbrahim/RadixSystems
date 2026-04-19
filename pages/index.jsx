@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
+import { useState } from 'react'
 import Navbar from '../components/Navbar/Navbar'
 import Hero from '../components/Hero/Hero'
 import Services from '../components/Services/Services'
@@ -10,6 +11,8 @@ import Footer from '../components/Footer/Footer'
 const Aurora = dynamic(() => import('../components/Aurora/Aurora'), { ssr: false })
 
 export default function Home({ projects }) {
+  const [quoteEmail, setQuoteEmail] = useState('');
+
   return (
     <>
       <Head>
@@ -29,10 +32,10 @@ export default function Home({ projects }) {
 
         <div className="content">
           <Navbar />
-          <Hero />
+          <Hero quoteEmail={quoteEmail} setQuoteEmail={setQuoteEmail} />
           <Services />
           <Projects />
-          <Contact />
+          <Contact quoteEmail={quoteEmail} setQuoteEmail={setQuoteEmail} />
           <Footer />
         </div>
       </div>
