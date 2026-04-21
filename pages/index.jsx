@@ -20,7 +20,8 @@ export default function Home({ projects }) {
     "url": "https://radixsystems.online",
     "logo": "https://radixsystems.online/favicon.svg",
     "sameAs": [
-      "https://www.instagram.com/radixsystems/"
+      "https://www.instagram.com/radixsystems/",
+      "https://www.linkedin.com/company/radix-systems/"
     ],
     "description": "Radix Systems builds modern web applications, AI automations, and enterprise cloud solutions.",
     "contactPoint": {

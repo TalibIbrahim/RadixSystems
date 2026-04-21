@@ -11,7 +11,7 @@ function Footer() {
               Delivering innovative software solutions that transform businesses and drive digital success.
             </p>
             <div className="footer-social">
-              <a href="#" aria-label="LinkedIn" className="footer-icon"><FiLinkedin /></a>
+              <a href="https://www.linkedin.com/company/radix-systems/" aria-label="LinkedIn" className="footer-icon" target="_blank" rel="noopener noreferrer"><FiLinkedin /></a>
               <a href="https://www.instagram.com/radixsystems/" aria-label="Instagram" className="footer-icon" target="_blank" rel="noopener noreferrer"><FiInstagram /></a>
               <a href="#" aria-label="Twitter" className="footer-icon"><FiTwitter /></a>
               <a href="#" aria-label="GitHub" className="footer-icon"><FiGithub /></a>
