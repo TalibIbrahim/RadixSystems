@@ -1,4 +1,4 @@
-import { FiLinkedin, FiTwitter, FiGithub, FiMail, FiMapPin } from "react-icons/fi";
+import { FiLinkedin, FiTwitter, FiGithub, FiMail, FiMapPin, FiInstagram } from "react-icons/fi";
 
 function Footer() {
   return (
@@ -12,6 +12,7 @@ function Footer() {
             </p>
             <div className="footer-social">
               <a href="#" aria-label="LinkedIn" className="footer-icon"><FiLinkedin /></a>
+              <a href="https://www.instagram.com/radixsystems/" aria-label="Instagram" className="footer-icon" target="_blank" rel="noopener noreferrer"><FiInstagram /></a>
               <a href="#" aria-label="Twitter" className="footer-icon"><FiTwitter /></a>
               <a href="#" aria-label="GitHub" className="footer-icon"><FiGithub /></a>
             </div>

@@ -19,6 +19,9 @@ export default function Home({ projects }) {
     "name": "Radix Systems",
     "url": "https://radixsystems.online",
     "logo": "https://radixsystems.online/favicon.svg",
+    "sameAs": [
+      "https://www.instagram.com/radixsystems/"
+    ],
     "description": "Radix Systems builds modern web applications, AI automations, and enterprise cloud solutions.",
     "contactPoint": {
       "@type": "ContactPoint",
@@ -43,6 +46,7 @@ export default function Home({ projects }) {
         <meta name="twitter:description" content="Radix Systems builds web apps, AI automations, and cloud solutions." />
         <meta name="twitter:image" content="https://radixsystems.online/hero.png" />
         <link rel="canonical" href="https://radixsystems.online/" />
+        <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dk5pnej6r/image/upload/v1776262909/Radix%20Systems/radix_systems_pc3puk.svg" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
